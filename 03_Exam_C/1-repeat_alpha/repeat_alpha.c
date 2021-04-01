@@ -1,5 +1,4 @@
 #include <unistd.h>
-#include <stdio.h>
 
 int	index_character(char letter)
 {
