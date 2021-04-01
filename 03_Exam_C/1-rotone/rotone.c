@@ -1,15 +1,15 @@
 #include <unistd.h>
 #include <stdio.h>
 
-int	rot13(char letter)
+int	rotone(char letter)
 {
 	int	index;
 
 	index = letter;
 	if (letter >= 'a' && letter <= 'z')
-		index = (letter - 'a' + 13) % 26 + 'a';
+		index = (letter - 'a' + 1) % 26 + 'a';
 	else if (letter >= 'A' && letter <= 'Z')
-		index = (letter - 'A' + 13) % 26 + 'A';
+		index = (letter - 'A' + 1) % 26 + 'A';
 	return (index);
 }
 
@@ -23,7 +23,7 @@ int	main(int argc, char *argv[])
 	{
 		while (argv[1][i])
 		{
-			value = rot13(argv[1][i]);
+			value = rotone(argv[1][i]);
 			write(1, &value, 1);
 			i++;
 		}

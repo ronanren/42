@@ -19,7 +19,7 @@ int	main(int argc, char *argv[])
 	int	repeat;
 
 	i = 0;
-	if (argc > 1)
+	if (argc == 2)
 	{
 		while (argv[1][i])
 		{
